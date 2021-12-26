@@ -22,7 +22,17 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 	});
 
+	/**
+	 * 時刻を取得する機能の設定
+	 */
+	let disposable2 = vscode.commands.registerCommand('extension.currentTime', () => {
+		const time = new Date().toLocaleString('ja-JP');
+		console.log(time);
+		vscode.window.showInformationMessage("現在時刻は、" + time + "です。");
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable2);
 }
 
 // this method is called when your extension is deactivated

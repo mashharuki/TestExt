@@ -11,7 +11,8 @@
 	],
 	"activationEvents": [
         "onCommand:testExt.helloWorld",
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.helloWorld",
+		"onCommand:extension.currentTime"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -24,6 +25,11 @@
 				"command": "extension.helloWorld",
 				"category": "ひとりごと",
 				"title": "ねむいよー"
+			},
+			{
+				"command": "extension.currentTime",
+				"category": "ひとりごと",
+				"title": "現在時刻は？？"
 			}
 		]
 	},
